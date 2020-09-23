@@ -21,4 +21,8 @@ public class Points {
     public static Point divide(Point p1, Point p2) {
         return new Point(p1.x / p2.x, p1.y / p2.y, p1.z / p2.z);
     }
+
+    public static Point enlarge(Point p1, double x){
+        return new Point(p1.x*x, p1.y*x, p1.z*x);
+    }
 }
