@@ -74,4 +74,18 @@ public class PointsTest {
         assertEquals(inversePoint.y, -0.25, DELTA);
         assertEquals(inversePoint.z, -0.16666, DELTA);
     }
+
+    @Test
+    public void testScalarProduct() {
+        double scalarPoint = Points.scalarProduct(firstPoint, secondPoint);
+        assertEquals(scalarPoint, -174, DELTA);
+    }
+
+    @Test
+    public void testVectorProduct() {
+        Point vectorPoint = Points.vectorProduct(firstPoint, secondPoint);
+        assertEquals(vectorPoint.x, 20, DELTA);
+        assertEquals(vectorPoint.y, 42, DELTA);
+        assertEquals(vectorPoint.z, 32, DELTA);
+    }
 }
