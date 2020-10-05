@@ -57,6 +57,21 @@ public class PointsTest {
         double lengthSecondPoint = Points.length(secondPoint);
         assertEquals(lengthFirstPoint, 9.43398, DELTA);
         assertEquals(lengthSecondPoint, 19.39072, DELTA);
+    }
 
+    @Test
+    public void testOpposite() {
+        Point oppositePoint = Points.opposite(firstPoint);
+        assertEquals(oppositePoint.x, 8, DELTA);
+        assertEquals(oppositePoint.y, 0, DELTA);
+        assertEquals(oppositePoint.z, -5, DELTA);
+    }
+
+    @Test
+    public void testInverse() {
+        Point inversePoint = Points.inverse(secondPoint);
+        assertEquals(inversePoint.x, 0.05555, DELTA);
+        assertEquals(inversePoint.y, -0.25, DELTA);
+        assertEquals(inversePoint.z, -0.16666, DELTA);
     }
 }
