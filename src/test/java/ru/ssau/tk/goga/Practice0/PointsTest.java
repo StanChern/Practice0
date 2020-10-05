@@ -6,7 +6,7 @@ import static org.testng.Assert.*;
 
 public class PointsTest {
 
-    private static final double DELTA = 0.0001;
+    private static final double DELTA = 0.00001;
     Point firstPoint = new Point(-8, 0, 5);
     Point secondPoint = new Point(18, -4, -6);
     double number = -3;
@@ -49,5 +49,14 @@ public class PointsTest {
         assertEquals(enlargePoint.x, 24, DELTA);
         assertEquals(enlargePoint.y, 0, DELTA);
         assertEquals(enlargePoint.z, -15, DELTA);
+    }
+
+    @Test
+    public void testLength() {
+        double lengthFirstPoint = Points.length(firstPoint);
+        double lengthSecondPoint = Points.length(secondPoint);
+        assertEquals(lengthFirstPoint, 9.43398, DELTA);
+        assertEquals(lengthSecondPoint, 19.39072, DELTA);
+
     }
 }
