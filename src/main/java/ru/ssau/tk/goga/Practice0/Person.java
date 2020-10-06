@@ -7,7 +7,6 @@ public class Person {
     private int passportID;
 
     public Person() {
-
     }
 
     public Person(String firstName, String lastName) {
