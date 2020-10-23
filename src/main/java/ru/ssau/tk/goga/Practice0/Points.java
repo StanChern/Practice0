@@ -2,6 +2,8 @@ package ru.ssau.tk.goga.Practice0;
 
 public class Points {
 
+    private static final double DELTA = 0.00001;
+
     public static Point sum(Point p1, Point p2) {
         return new Point(p1.x + p2.x, p1.y + p2.y, p1.z + p2.z);
     }
@@ -40,5 +42,13 @@ public class Points {
 
     public static Point vectorProduct(Point p1, Point p2) {
         return new Point(p1.y * p2.z - p2.y * p1.z, -(p1.x * p2.z - p2.x * p1.z), p1.x * p2.y - p2.x * p1.y);
+    }
+
+    public static boolean equalsApproximately(double a, double b) {
+        return Math.abs(a - b) < DELTA;
+    }
+
+    public static boolean equalsApproximately(Point a, Point b) {
+        return equalsApproximately(a.x, b.x) & equalsApproximately(a.y, b.y) & equalsApproximately(a.y, b.y);
     }
 }

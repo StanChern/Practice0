@@ -17,6 +17,8 @@ public class PointsTest {
         assertEquals(sumPoint.x, 10, DELTA);
         assertEquals(sumPoint.y, -4, DELTA);
         assertEquals(sumPoint.z, -1, DELTA);
+
+        assertTrue(Points.equalsApproximately(sumPoint, new Point(10, -4, -1)));
     }
 
     @Test
@@ -25,6 +27,8 @@ public class PointsTest {
         assertEquals(subtractPoint.x, -26, DELTA);
         assertEquals(subtractPoint.y, 4, DELTA);
         assertEquals(subtractPoint.z, 11, DELTA);
+
+        assertTrue(Points.equalsApproximately(subtractPoint, new Point(-26, 4, 11)));
     }
 
     @Test
@@ -33,6 +37,8 @@ public class PointsTest {
         assertEquals(multiplyPoint.x, -144, DELTA);
         assertEquals(multiplyPoint.y, 0, DELTA);
         assertEquals(multiplyPoint.z, -30, DELTA);
+
+        assertTrue(Points.equalsApproximately(multiplyPoint, new Point(-144, 0, -30)));
     }
 
     @Test
@@ -41,6 +47,8 @@ public class PointsTest {
         assertEquals(dividePoint.x, -0.44444, DELTA);
         assertEquals(dividePoint.y, 0, DELTA);
         assertEquals(dividePoint.z, -0.83333, DELTA);
+
+        assertTrue(Points.equalsApproximately(dividePoint, new Point(-0.44444, 0, -0.83333)));
     }
 
     @Test
@@ -49,6 +57,8 @@ public class PointsTest {
         assertEquals(enlargePoint.x, 24, DELTA);
         assertEquals(enlargePoint.y, 0, DELTA);
         assertEquals(enlargePoint.z, -15, DELTA);
+
+        assertTrue(Points.equalsApproximately(enlargePoint, new Point(24, 0, -15)));
     }
 
     @Test
@@ -57,6 +67,9 @@ public class PointsTest {
         double lengthSecondPoint = Points.length(secondPoint);
         assertEquals(lengthFirstPoint, 9.43398, DELTA);
         assertEquals(lengthSecondPoint, 19.39072, DELTA);
+
+        assertTrue(Points.equalsApproximately(Points.length(firstPoint),9.43398));
+        assertTrue(Points.equalsApproximately(Points.length(secondPoint), 19.39072));
     }
 
     @Test
@@ -65,6 +78,8 @@ public class PointsTest {
         assertEquals(oppositePoint.x, 8, DELTA);
         assertEquals(oppositePoint.y, 0, DELTA);
         assertEquals(oppositePoint.z, -5, DELTA);
+
+        assertTrue(Points.equalsApproximately(oppositePoint, new Point(8, 0, -5)));
     }
 
     @Test
@@ -73,12 +88,16 @@ public class PointsTest {
         assertEquals(inversePoint.x, 0.05555, DELTA);
         assertEquals(inversePoint.y, -0.25, DELTA);
         assertEquals(inversePoint.z, -0.16666, DELTA);
+
+        assertTrue(Points.equalsApproximately(inversePoint, new Point(0.05555, -0.25, -0.16666)));
     }
 
     @Test
     public void testScalarProduct() {
         double scalarPoint = Points.scalarProduct(firstPoint, secondPoint);
         assertEquals(scalarPoint, -174, DELTA);
+
+        assertTrue(Points.equalsApproximately(scalarPoint,-174));
     }
 
     @Test
@@ -87,5 +106,7 @@ public class PointsTest {
         assertEquals(vectorPoint.x, 20, DELTA);
         assertEquals(vectorPoint.y, 42, DELTA);
         assertEquals(vectorPoint.z, 32, DELTA);
+
+        assertTrue(Points.equalsApproximately(vectorPoint, new Point(20, 42, 32)));
     }
 }
