@@ -3,13 +3,30 @@ package ru.ssau.tk.goga.Practice0;
 public class MainClass {
 
     public static void main(String[] args) {
+        Person person = new Person();
+        person.setFirstName("Arkadiy");
+        int number = 5;
+        checkInt(number);
+        /*1.вызываем checkInt(number), который делает нам нам sout(10).
+        Значение поля number поменяется только внутри выполнения этого
+        метода(т.е. начение копии number), а глобально для всей программы number останется = 5   */
+        checkPerson(person);
+        /*2. в этом случае поле firstName класса person изменится, т.к. создавалась не копия
+        объекта, а копия ссылки на объект
+         */
+        System.out.println(number);
+        // Выводим получаем 5
+        System.out.println(person.getFirstName());
+        // Выводим получаем Олега
+    }
 
-        Point firstPoint = new Point(1,1,1);
-        Point secondPoint = new Point(0,0,0);
-        Point thirdPoint = new Point(3,4,5);
+    private static void checkInt(int number) {
+        number = 10;
+        System.out.println(number);
+    }
 
-        Point resultPoint1 = Points.enlarge(thirdPoint, 6);
-
-        System.out.println("enlarge:" + resultPoint1.x + ' '+ resultPoint1.y + ' ' + resultPoint1.z);
+    private static void checkPerson(Person person) {
+        person.setFirstName("Oleg");
+        System.out.println(person.getFirstName());
     }
 }
