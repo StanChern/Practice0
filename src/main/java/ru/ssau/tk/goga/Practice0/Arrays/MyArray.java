@@ -24,4 +24,14 @@ public class MyArray {
         }
         return array;
     }
+
+    static int[] generateFlippedEvenNumbers(int n) {
+        int[] array = new int[n];
+        int k = n * 2;
+        for (int i = 0; i < n; i++) {
+            array[i] = k;
+            k = k - 2;
+        }
+        return array;
+    }
 }
