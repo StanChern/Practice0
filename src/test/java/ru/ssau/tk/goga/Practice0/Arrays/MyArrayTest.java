@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-public class CreateArrayTest {
+public class MyArrayTest {
 
     @Test
     public void testCreateArray() {
@@ -17,5 +17,11 @@ public class CreateArrayTest {
         assertEquals(MyArray.generateOnesArray(2), new int[]{2, 2});
         assertEquals(MyArray.generateOnesArray(1), new int[]{2});
         assertEquals(MyArray.generateOnesArray(5), new int[]{2, 1, 1, 1, 2});
+    }
+
+    public void testGenerateOddNumbers() {
+        assertEquals(MyArray.generateOddNumbers(2), new int[]{1,3});
+        assertEquals(MyArray.generateOddNumbers(1), new int[]{1});
+        assertEquals(MyArray.generateOddNumbers(5), new int[]{1,3,5,7,9});
     }
 }

@@ -14,4 +14,14 @@ public class MyArray {
         array[n - 1] = 2;
         return array;
     }
+
+    static int[] generateOddNumbers(int n) {
+        int[] array = new int[n];
+        int k = 1;
+        for (int i = 0; i < n; i++) {
+            array[i] = k;
+            k = k + 2;
+        }
+        return array;
+    }
 }
