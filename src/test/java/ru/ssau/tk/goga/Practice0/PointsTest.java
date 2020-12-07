@@ -1,6 +1,8 @@
 package ru.ssau.tk.goga.Practice0;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.goga.Practice0.DataType.Point;
+import ru.ssau.tk.goga.Practice0.DataType.Points;
 
 import static org.testng.Assert.*;
 

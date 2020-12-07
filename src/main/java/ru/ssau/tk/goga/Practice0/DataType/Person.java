@@ -1,4 +1,4 @@
-package ru.ssau.tk.goga.Practice0;
+package ru.ssau.tk.goga.Practice0.DataType;
 
 public class Person {
 

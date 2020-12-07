@@ -1,6 +1,7 @@
 package ru.ssau.tk.goga.Practice0;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.goga.Practice0.DataType.Person;
 
 import static org.testng.Assert.*;
 
