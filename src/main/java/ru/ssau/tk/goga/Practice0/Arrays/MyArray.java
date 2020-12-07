@@ -50,4 +50,12 @@ public class MyArray {
         }
         return array;
     }
+
+    static int[] generatePowIndex(int n) {
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = i * i;
+        }
+        return array;
+    }
 }
