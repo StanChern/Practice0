@@ -47,4 +47,12 @@ public class MyArrayTest {
         assertEquals(MyArray.generatePowIndex(1), new int[]{0});
         assertEquals(MyArray.generatePowIndex(5), new int[]{0, 1, 4, 9, 16});
     }
+
+    @Test
+    public void testSolveQuadraticEquation() {
+        assertEquals(MyArray.solveQuadraticEquation(0,2,-4),new double[]{2});
+        assertEquals(MyArray.solveQuadraticEquation(10,200,1654),new double[]{});
+        assertEquals(MyArray.solveQuadraticEquation(1,-2,1),new double[]{1});
+        assertEquals(MyArray.solveQuadraticEquation(1,0,-9),new double[]{3,-3});
+    }
 }
