@@ -75,4 +75,17 @@ public class MyArray {
         array[1] = (-b - Math.sqrt(D)) / 2;
         return array;
     }
+
+    static int[] getWithoutMultiplesOfThree(int n) {
+        int[] array = new int[n];
+        int k = 1;
+        for (int i = 0; i < n; i++) {
+            array[i] = k;
+            k++;
+            if (k % 3 == 0) {
+                k++;
+            }
+        }
+        return array;
+    }
 }

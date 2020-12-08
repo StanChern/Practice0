@@ -55,4 +55,10 @@ public class MyArrayTest {
         assertEquals(MyArray.solveQuadraticEquation(1,-2,1),new double[]{1});
         assertEquals(MyArray.solveQuadraticEquation(1,0,-9),new double[]{3,-3});
     }
+
+    @Test
+    public void testGetWithoutMultiplesOfThree() {
+        assertEquals(MyArray.getWithoutMultiplesOfThree(1), new int[]{1});
+        assertEquals(MyArray.getWithoutMultiplesOfThree(6), new int[]{1, 2, 4, 5, 7, 8});
+    }
 }
