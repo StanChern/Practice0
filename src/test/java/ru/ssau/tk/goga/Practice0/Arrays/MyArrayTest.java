@@ -75,4 +75,11 @@ public class MyArrayTest {
         assertEquals(MyArray.getGeometricProgression(2, 1, 5), new double[]{1, 5});
         assertEquals(MyArray.getGeometricProgression(3, 400, 0.5), new double[]{400, 200, 100});
     }
+
+    @Test
+    public void testGetDividersOfNumbers() {
+        double[] firstArray = MyArray.getDividersOfNumbers(6);
+        assertEquals(MyArray.getDividersOfNumbers(6),  new double[]{1, 2, 3, 6});
+        assertEquals(MyArray.getDividersOfNumbers(7),  new double[]{1, 7});
+    }
 }
