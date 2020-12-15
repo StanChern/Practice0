@@ -103,4 +103,12 @@ public class MyArrayTest {
         assertEquals(MyArray.findNumberInArray(array, 4), true);
         assertEquals(MyArray.findNumberInArray(array, 7), false);
     }
+
+    @Test
+    public void testFindNullInArray() {
+        Integer[] array = new Integer[]{2, 5, 6, null};
+        Integer[] array2 = new Integer[]{2, 5, 6};
+        assertEquals(MyArray.findNullInArray(array), true);
+        assertEquals(MyArray.findNullInArray(array2), false);
+    }
 }

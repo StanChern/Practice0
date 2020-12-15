@@ -152,4 +152,13 @@ public class MyArray {
         }
         return false;
     }
+
+    static boolean findNullInArray(Integer[] array) {
+        for (Integer integer : array) {
+            if (integer == null) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
