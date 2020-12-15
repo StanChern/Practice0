@@ -136,4 +136,12 @@ public class MyArrayTest {
         int[] array = {2, -6, 10, -14};
         assertEquals(MyArray.sumForEvenIndex(array), 12);
     }
+
+    @Test
+    public void testWhoBestDivider() {
+        int[] array = new int[]{1, 2, 4, 8, 16, 2};
+        assertEquals(MyArray.whoBestDivider(array), true);
+        int[] _1array = new int[]{16515, 2, 4, 8, 2};
+        assertEquals(MyArray.whoBestDivider(_1array), false);
+    }
 }
