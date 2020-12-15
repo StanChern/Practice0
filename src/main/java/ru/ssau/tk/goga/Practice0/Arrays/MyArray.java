@@ -137,4 +137,10 @@ public class MyArray {
         }
         return array;
     }
+
+    static void changeSign(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = -array[i];
+        }
+    }
 }
