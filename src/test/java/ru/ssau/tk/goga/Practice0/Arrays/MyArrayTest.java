@@ -126,8 +126,14 @@ public class MyArrayTest {
     public void testGetMax() {
         int[] array1 = {2, -6, 8, 2};
         int[] array2 = {5};
-        assertEquals(MyArray.getMax(array1),(Integer) 8);
-        assertEquals(MyArray.getMax(array2),(Integer) 5);
+        assertEquals(MyArray.getMax(array1), (Integer) 8);
+        assertEquals(MyArray.getMax(array2), (Integer) 5);
         assertEquals(MyArray.getMax(new int[]{}), null);
+    }
+
+    @Test
+    public void testSumForEvenIndex() {
+        int[] array = {2, -6, 10, -14};
+        assertEquals(MyArray.sumForEvenIndex(array), 12);
     }
 }
