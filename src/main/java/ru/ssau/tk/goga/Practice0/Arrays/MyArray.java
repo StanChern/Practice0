@@ -171,4 +171,18 @@ public class MyArray {
         }
         return count;
     }
+
+    static Integer getMax(int[] array) {
+        if (array.length == 0) {
+            return null;
+        }
+
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i - 1] < array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
 }
