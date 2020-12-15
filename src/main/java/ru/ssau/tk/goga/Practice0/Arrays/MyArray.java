@@ -125,4 +125,16 @@ public class MyArray {
         }
         return array;
     }
+
+    public static int[] getMirror(int n) {
+        if (n == 0) {
+            return null;
+        }
+        int[] array = new int[n];
+        for (int i = 0; i < Math.ceil((double) n / 2); i++) {
+            array[i] = i + 1;
+            array[n - i - 1] = i + 1;
+        }
+        return array;
+    }
 }

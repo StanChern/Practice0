@@ -22,9 +22,9 @@ public class MyArrayTest {
 
     @Test
     public void testGenerateOddNumbers() {
-        assertEquals(MyArray.generateOddNumbers(2), new int[]{1,3});
+        assertEquals(MyArray.generateOddNumbers(2), new int[]{1, 3});
         assertEquals(MyArray.generateOddNumbers(1), new int[]{1});
-        assertEquals(MyArray.generateOddNumbers(5), new int[]{1,3,5,7,9});
+        assertEquals(MyArray.generateOddNumbers(5), new int[]{1, 3, 5, 7, 9});
     }
 
     @Test
@@ -50,10 +50,10 @@ public class MyArrayTest {
 
     @Test
     public void testSolveQuadraticEquation() {
-        assertEquals(MyArray.solveQuadraticEquation(0,2,-4),new double[]{2});
-        assertEquals(MyArray.solveQuadraticEquation(10,200,1654),new double[]{});
-        assertEquals(MyArray.solveQuadraticEquation(1,-2,1),new double[]{1});
-        assertEquals(MyArray.solveQuadraticEquation(1,0,-9),new double[]{3,-3});
+        assertEquals(MyArray.solveQuadraticEquation(0, 2, -4), new double[]{2});
+        assertEquals(MyArray.solveQuadraticEquation(10, 200, 1654), new double[]{});
+        assertEquals(MyArray.solveQuadraticEquation(1, -2, 1), new double[]{1});
+        assertEquals(MyArray.solveQuadraticEquation(1, 0, -9), new double[]{3, -3});
     }
 
     @Test
@@ -79,7 +79,13 @@ public class MyArrayTest {
     @Test
     public void testGetDividersOfNumbers() {
         double[] firstArray = MyArray.getDividersOfNumbers(6);
-        assertEquals(MyArray.getDividersOfNumbers(6),  new double[]{1, 2, 3, 6});
-        assertEquals(MyArray.getDividersOfNumbers(7),  new double[]{1, 7});
+        assertEquals(MyArray.getDividersOfNumbers(6), new double[]{1, 2, 3, 6});
+        assertEquals(MyArray.getDividersOfNumbers(7), new double[]{1, 7});
+    }
+
+    @Test
+    public void testGetMirror() {
+        assertEquals(MyArray.getMirror(6), new int[]{1, 2, 3, 3, 2, 1});
+        assertEquals(MyArray.getMirror(7), new int[]{1, 2, 3, 4, 3, 2, 1});
     }
 }
