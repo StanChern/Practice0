@@ -111,4 +111,14 @@ public class MyArrayTest {
         assertEquals(MyArray.findNullInArray(array), true);
         assertEquals(MyArray.findNullInArray(array2), false);
     }
+
+    @Test
+    public void testGetCountEvenNumbers() {
+        int[] array1 = {2, -6, 8, 2};
+        int[] array2 = {9, -6, 3, 2};
+        int[] array3 = {7, -1, 3, 9};
+        assertEquals(MyArray.getCountEvenNumbers(array1), 4);
+        assertEquals(MyArray.getCountEvenNumbers(array2), 2);
+        assertEquals(MyArray.getCountEvenNumbers(array3), 0);
+    }
 }

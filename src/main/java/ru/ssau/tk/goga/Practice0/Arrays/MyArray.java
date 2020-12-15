@@ -161,4 +161,14 @@ public class MyArray {
         }
         return false;
     }
+
+    static int getCountEvenNumbers(int[] array) {
+        int count = 0;
+        for (int i : array) {
+            if (i % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
