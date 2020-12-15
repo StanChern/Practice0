@@ -143,4 +143,13 @@ public class MyArray {
             array[i] = -array[i];
         }
     }
+
+    static boolean findNumberInArray(int[] array, int n) {
+        for (int i : array) {
+            if (i == n) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

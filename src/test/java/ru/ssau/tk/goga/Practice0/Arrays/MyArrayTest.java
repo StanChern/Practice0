@@ -95,4 +95,12 @@ public class MyArrayTest {
         MyArray.changeSign(array);
         assertEquals(array, new int[]{0, -564, 1159});
     }
+
+    @Test
+    public void testFindNumberInArray() {
+        int[] array = {2, 6, 8, 10, 4};
+        assertEquals(MyArray.findNumberInArray(array, 0), false);
+        assertEquals(MyArray.findNumberInArray(array, 4), true);
+        assertEquals(MyArray.findNumberInArray(array, 7), false);
+    }
 }
