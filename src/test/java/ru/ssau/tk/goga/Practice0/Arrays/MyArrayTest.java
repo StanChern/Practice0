@@ -175,4 +175,15 @@ public class MyArrayTest {
         MyArray.exchangedMaxAndMin(array3);
         assertEquals(array3, new int[]{0, 7, 2, 0, -10});
     }
+
+    @Test
+    public void testApplyBitNot() {
+        int[] array = {254, 32};
+        MyArray.applyBitNot(array);
+        assertEquals(array[0], ~254);
+        assertEquals(array[1], ~32);
+        MyArray.applyBitNot(array);
+        assertEquals(array[0], 254);
+        assertEquals(array[1], 32);
+    }
 }
