@@ -144,4 +144,14 @@ public class MyArrayTest {
         int[] _1array = new int[]{16515, 2, 4, 8, 2};
         assertEquals(MyArray.whoBestDivider(_1array), false);
     }
+
+    @Test
+    public void testFindMostEntryElement() {
+        int[] array1 = {1, 1, 1, 2, 3, 3, 3, 4, 7, 6, 5};
+        assertEquals(MyArray.findMostEntryElement(array1), 1);
+        int[] array2 = {1, 2, 3, 4, 5, 11, 47, 89, 5, 32, 5, 4};
+        assertEquals(MyArray.findMostEntryElement(array2), 4);
+        int[] array3 = {0, -2, 3, 0, -5, 0, -4, 6, 0, 6};
+        assertEquals(MyArray.findMostEntryElement(array3), 0);
+    }
 }

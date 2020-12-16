@@ -208,4 +208,20 @@ public class MyArray {
         }
         return firstCount > lastCount;
     }
+
+    static int findMostEntryElement(int[] array) {
+        int max_entry = 1;
+        for (int i = 0; i < array.length - 1; i++) {
+            int entry = 1;
+            for (int k = i + 1; k < array.length; k++) {
+                if (array[i] == array[k]) {
+                    entry += 1;
+                }
+                if (entry > max_entry) {
+                    return array[i];
+                }
+            }
+        }
+        return 0;
+    }
 }
