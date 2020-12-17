@@ -31,4 +31,22 @@ public class MyString {
     static boolean differentInRegister(String s1, String s2) {
         return s1.equalsIgnoreCase(s2) && !s1.equals(s2);
     }
+
+    static void escapeCharacter() {
+        int i = 0;
+        //табуляция
+        System.out.println("Символ\t№" + ++i);
+        //удаление последнего элемента в строке
+        System.out.println("Символ\b№" + ++i);
+        //переход на новую строку
+        System.out.println("Символ\n№" + ++i);
+        //игнорирование текста до \r
+        System.out.println("Символ\r№" + ++i);
+        //символ '
+        System.out.println("Символ\'№" + ++i);
+        //символ "
+        System.out.println("Символ\"№" + ++i);
+        // символ /
+        System.out.println("Символ\\№" + ++i);
+    }
 }
