@@ -14,4 +14,11 @@ public class MyStringTest {
         assertFalse(MyString.checkPalindrome("каток"));
         assertTrue(MyString.checkPalindrome("12345K54321"));
     }
+
+    @Test
+    public void testFindFirstInSecond() {
+        assertEquals(MyString.findFirstInSecond("ca","abcaca"),2);
+        assertEquals(MyString.findFirstInSecond("кот","токикот"),4);
+        assertEquals(MyString.findFirstInSecond("qwer","tr"),-1);
+    }
 }

@@ -32,7 +32,7 @@ public class MyString {
         return s1.equalsIgnoreCase(s2) && !s1.equals(s2);
     }
 
-    static void escapeCharacter() {
+   /* static void escapeCharacter() {
         int i = 0;
         //табуляция
         System.out.println("Символ\t№" + ++i);
@@ -48,5 +48,9 @@ public class MyString {
         System.out.println("Символ\"№" + ++i);
         // символ /
         System.out.println("Символ\\№" + ++i);
+    }*/
+
+    static int findFirstInSecond(String str1, String str2) {
+        return str2.indexOf(str1);
     }
 }
