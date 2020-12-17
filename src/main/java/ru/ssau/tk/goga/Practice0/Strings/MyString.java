@@ -15,11 +15,16 @@ public class MyString {
         }
     }
 
-    static void checkingStrings() {
+   /* static void checkingStrings() {
         String s1 = "S";
         String s2 = new String(s1);
 
         System.out.println(s1 == s2);
         System.out.println(s1.equals(s2));
+    }*/
+
+    static boolean checkPalindrome(String myString) {
+        String palindrome = new StringBuilder(myString).reverse().toString();
+        return myString.equals(palindrome);
     }
 }
