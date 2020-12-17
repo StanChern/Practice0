@@ -27,4 +27,8 @@ public class MyString {
         String palindrome = new StringBuilder(myString).reverse().toString();
         return myString.equals(palindrome);
     }
+
+    static boolean differentInRegister(String s1, String s2) {
+        return s1.equalsIgnoreCase(s2) && !s1.equals(s2);
+    }
 }
