@@ -10,18 +10,18 @@ public class Person {
     }
 
     public Person(String firstName, String lastName) {
-        this.firstName=firstName;
-        this.lastName=lastName;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Person(int passportID) {
-        this.passportID=passportID;
+        this.passportID = passportID;
     }
 
     public Person(String firstName, String lastName, int passportID) {
-        this.firstName=firstName;
-        this.lastName=lastName;
-        this.passportID=passportID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportID = passportID;
     }
 
     public void setFirstName(String firstName) {
@@ -46,5 +46,9 @@ public class Person {
 
     public int getPassportID() {
         return passportID;
+    }
+
+    public String toString() {
+        return firstName + " " + lastName;
     }
 }

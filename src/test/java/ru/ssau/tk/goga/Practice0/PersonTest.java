@@ -68,4 +68,10 @@ public class PersonTest {
         assertEquals(fullPerson.getLastName(), "Koshkina");
         assertEquals(fullPerson.getPassportID(), 21);
     }
+
+    @Test
+    public void testTestToString() {
+        Person I = new Person("Marina", "Koshkina");
+        assertEquals(I.toString(), "Marina Koshkina");
+    }
 }
