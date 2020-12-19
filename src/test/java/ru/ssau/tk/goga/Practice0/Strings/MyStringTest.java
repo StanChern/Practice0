@@ -21,4 +21,11 @@ public class MyStringTest {
         assertEquals(MyString.findFirstInSecond("кот","токикот"),4);
         assertEquals(MyString.findFirstInSecond("qwer","tr"),-1);
     }
+
+    @Test
+    public void testFindFirstInSecondToo() {
+        assertEquals(MyString.findFirstInSecond("ca","abcaca"),2);
+        assertEquals(MyString.findFirstInSecond("кот","токикот"),4);
+        assertEquals(MyString.findFirstInSecond("qwer","tr"),-1);
+    }
 }
