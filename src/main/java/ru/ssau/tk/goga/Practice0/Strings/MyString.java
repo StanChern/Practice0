@@ -88,4 +88,17 @@ public class MyString {
         }
         return str1;
     }
+
+    static String getSubstring(String str, int from, int to) {
+        if (from < 0) {
+            from = 0;
+        }
+        if (to > str.length()) {
+            to = str.length();
+        }
+        if (to <= from) {
+            return "";
+        }
+        return str.substring(from, to);
+    }
 }

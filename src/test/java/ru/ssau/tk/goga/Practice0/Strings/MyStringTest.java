@@ -59,4 +59,11 @@ public class MyStringTest {
     public void testDoPopppo() {
         assertEquals(MyString.doPopppo("opopopopo", "opo", "po"), "popppo");
     }
+
+    @Test
+    public void testGetSubstring() {
+        assertEquals(MyString.getSubstring("string", 20, 100), "");
+        assertEquals(MyString.getSubstring("string", 1, 2), "t");
+        assertEquals(MyString.getSubstring("string", -1, 12345), "string");
+    }
 }
