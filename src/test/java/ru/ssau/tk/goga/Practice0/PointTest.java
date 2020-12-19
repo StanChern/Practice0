@@ -17,4 +17,10 @@ public class PointTest {
         Point lengthPoint2 = new Point(-12, 0, 16);
         assertEquals(lengthPoint2.length(lengthPoint2), 20, DELTA);
     }
+
+    @Test
+    public void testTestToString() {
+        Point myPoint = new Point(3, 4, 5);
+        assertEquals(myPoint.toString(), "[3.0, 4.0, 5.0]");
+    }
 }
