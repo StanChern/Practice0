@@ -2,6 +2,8 @@ package ru.ssau.tk.goga.Practice0.Strings;
 
 import org.testng.annotations.Test;
 
+import java.nio.charset.StandardCharsets;
+
 import static org.testng.Assert.*;
 
 public class MyStringTest {
@@ -86,5 +88,12 @@ public class MyStringTest {
     @Test
     public void testSequenceOfNumbers() {
         assertEquals(MyString.sequenceOfNumbers(3),"0 1 2");
+    }
+
+    @Test
+    public void testChangeCharsetStr() {
+        String str = "hello world";
+        MyString.changeCharsetStr(str, StandardCharsets.UTF_8, StandardCharsets.UTF_16LE);
+        MyString.changeCharsetStr(str,StandardCharsets.UTF_16LE,StandardCharsets.UTF_8);
     }
 }

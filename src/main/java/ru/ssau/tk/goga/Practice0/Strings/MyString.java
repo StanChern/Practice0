@@ -1,5 +1,6 @@
 package ru.ssau.tk.goga.Practice0.Strings;
 
+import java.nio.charset.Charset;
 import java.util.Arrays;
 
 public class MyString {
@@ -126,5 +127,10 @@ public class MyString {
             str.append(" ");
         }
         return str.toString().trim();
+    }
+
+    public static void changeCharsetStr(String str, Charset CharSet1, Charset charSet2){
+        String str2 = new String(str.getBytes(CharSet1), charSet2);
+        System.out.println(str2);
     }
 }
