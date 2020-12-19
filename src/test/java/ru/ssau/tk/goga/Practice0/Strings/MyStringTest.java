@@ -54,4 +54,9 @@ public class MyStringTest {
         assertEquals(MyString.countPrefixPostfixToo(strings, "s", "s"), 2);
         assertEquals(MyString.countPrefixPostfixToo(strings, "reb", "rgerv"), 0);
     }
+
+    @Test
+    public void testDoPopppo() {
+        assertEquals(MyString.doPopppo("opopopopo", "opo", "po"), "popppo");
+    }
 }
