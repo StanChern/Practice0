@@ -55,10 +55,20 @@ public class MyString {
     }
 
     static int findFirstInSecondToo(String str1, String str2) {
-        return str2.indexOf(str1,str2.length()/2);
+        return str2.indexOf(str1, str2.length() / 2);
     }
 
-    static int findFirstInSecondTooToo(String str1, String str2){
-        return str2.lastIndexOf(str1,str2.length()/2);
+    static int findFirstInSecondTooToo(String str1, String str2) {
+        return str2.lastIndexOf(str1, str2.length() / 2);
+    }
+
+    static int countPrefixPostfix(String[] strings, String prefix, String postfix) {
+        int count = 0;
+        for (String string : strings) {
+            if (string.startsWith(prefix) & string.endsWith(postfix)) {
+                count++;
+            }
+        }
+        return count;
     }
 }

@@ -17,16 +17,16 @@ public class MyStringTest {
 
     @Test
     public void testFindFirstInSecond() {
-        assertEquals(MyString.findFirstInSecond("ca","abcaca"),2);
-        assertEquals(MyString.findFirstInSecond("кот","токикот"),4);
-        assertEquals(MyString.findFirstInSecond("qwer","tr"),-1);
+        assertEquals(MyString.findFirstInSecond("ca", "abcaca"), 2);
+        assertEquals(MyString.findFirstInSecond("кот", "токикот"), 4);
+        assertEquals(MyString.findFirstInSecond("qwer", "tr"), -1);
     }
 
     @Test
     public void testFindFirstInSecondToo() {
-        assertEquals(MyString.findFirstInSecondToo("ca","abcaca"),4);
-        assertEquals(MyString.findFirstInSecondToo("кот","токикот"),4);
-        assertEquals(MyString.findFirstInSecondToo("qwer","tr"),-1);
+        assertEquals(MyString.findFirstInSecondToo("ca", "abcaca"), 4);
+        assertEquals(MyString.findFirstInSecondToo("кот", "токикот"), 4);
+        assertEquals(MyString.findFirstInSecondToo("qwer", "tr"), -1);
     }
 
     @Test
@@ -34,5 +34,15 @@ public class MyStringTest {
         assertEquals(MyString.findFirstInSecondTooToo("ca", "abcaca"), 2);
         assertEquals(MyString.findFirstInSecondTooToo("ток", "токикот"), 0);
         assertEquals(MyString.findFirstInSecondTooToo("qwer", "tr"), -1);
+    }
+
+
+    @Test
+    public void testCountPrefixPostfix() {
+        String[] strings = {"sos", "12345", "s", "123"};
+        assertEquals(MyString.countPrefixPostfix(strings, "1", "3"), 1);
+        assertEquals(MyString.countPrefixPostfix(strings, "1", "5"), 1);
+        assertEquals(MyString.countPrefixPostfix(strings, "s", "s"), 2);
+        assertEquals(MyString.countPrefixPostfix(strings, "reb", "rgerv"), 0);
     }
 }
