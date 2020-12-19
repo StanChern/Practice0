@@ -66,4 +66,14 @@ public class MyStringTest {
         assertEquals(MyString.getSubstring("string", 1, 2), "t");
         assertEquals(MyString.getSubstring("string", -1, 12345), "string");
     }
+
+    @Test
+    public void testSet() {
+        String str = "когда уже новый год";
+        String[] arrayStr = MyString.parseStringOnArray(str);
+        assertEquals(arrayStr[0], "Когда");
+        assertEquals(arrayStr[1], "Уже");
+        assertEquals(arrayStr[2], "Новый");
+        assertEquals(arrayStr[3], "Год");
+    }
 }

@@ -1,5 +1,7 @@
 package ru.ssau.tk.goga.Practice0.Strings;
 
+import java.util.Arrays;
+
 public class MyString {
 
     static void splitLine(String myString) {
@@ -100,5 +102,16 @@ public class MyString {
             return "";
         }
         return str.substring(from, to);
+    }
+
+    static String[] parseStringOnArray(String str) {
+        String[] arrayStr = str.split(" ");
+        return Arrays.stream(arrayStr)
+                .filter(s -> !s.isEmpty())
+                .map(s -> s.replace(
+                        String.valueOf(s.charAt(0)),
+                        String.valueOf(s.charAt(0)).toUpperCase()
+                ))
+                .toArray(String[]::new);
     }
 }
