@@ -45,4 +45,13 @@ public class MyStringTest {
         assertEquals(MyString.countPrefixPostfix(strings, "s", "s"), 2);
         assertEquals(MyString.countPrefixPostfix(strings, "reb", "rgerv"), 0);
     }
+
+    @Test
+    public void testCountPrefixPostfixToo() {
+        String[] strings = {"sos", "12345", "s", "123"};
+        assertEquals(MyString.countPrefixPostfixToo(strings, "1", "3"), 1);
+        assertEquals(MyString.countPrefixPostfixToo(strings, "1", "5"), 1);
+        assertEquals(MyString.countPrefixPostfixToo(strings, "s", "s"), 2);
+        assertEquals(MyString.countPrefixPostfixToo(strings, "reb", "rgerv"), 0);
+    }
 }

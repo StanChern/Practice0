@@ -71,4 +71,14 @@ public class MyString {
         }
         return count;
     }
+
+    static int countPrefixPostfixToo(String[] strings, String prefix, String postfix) {
+        int count = 0;
+        for (String string : strings) {
+            if (string.trim().startsWith(prefix) & string.trim().endsWith(postfix)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
