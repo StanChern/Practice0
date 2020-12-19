@@ -118,4 +118,13 @@ public class MyString {
     static String concatenateStrings(String[] strings) {
         return String.join(", ", strings);
     }
+
+    static String sequenceOfNumbers(int x) {
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < x; i++) {
+            str.append(i);
+            str.append(" ");
+        }
+        return str.toString().trim();
+    }
 }

@@ -82,4 +82,9 @@ public class MyStringTest {
         String[] strings = {"Нескоро", "наверное", "он"};
         assertEquals(MyString.concatenateStrings(strings), "Нескоро, наверное, он");
     }
+
+    @Test
+    public void testSequenceOfNumbers() {
+        assertEquals(MyString.sequenceOfNumbers(3),"0 1 2");
+    }
 }
