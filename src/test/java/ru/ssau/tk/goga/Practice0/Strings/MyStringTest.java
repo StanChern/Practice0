@@ -24,8 +24,15 @@ public class MyStringTest {
 
     @Test
     public void testFindFirstInSecondToo() {
-        assertEquals(MyString.findFirstInSecond("ca","abcaca"),2);
-        assertEquals(MyString.findFirstInSecond("кот","токикот"),4);
-        assertEquals(MyString.findFirstInSecond("qwer","tr"),-1);
+        assertEquals(MyString.findFirstInSecondToo("ca","abcaca"),4);
+        assertEquals(MyString.findFirstInSecondToo("кот","токикот"),4);
+        assertEquals(MyString.findFirstInSecondToo("qwer","tr"),-1);
+    }
+
+    @Test
+    public void testFindFirstInSecondTooToo() {
+        assertEquals(MyString.findFirstInSecondTooToo("ca", "abcaca"), 2);
+        assertEquals(MyString.findFirstInSecondTooToo("ток", "токикот"), 0);
+        assertEquals(MyString.findFirstInSecondTooToo("qwer", "tr"), -1);
     }
 }
