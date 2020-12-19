@@ -76,4 +76,10 @@ public class MyStringTest {
         assertEquals(arrayStr[2], "Новый");
         assertEquals(arrayStr[3], "Год");
     }
+
+    @Test
+    public void testConcatenateStrings() {
+        String[] strings = {"Нескоро", "наверное", "он"};
+        assertEquals(MyString.concatenateStrings(strings), "Нескоро, наверное, он");
+    }
 }

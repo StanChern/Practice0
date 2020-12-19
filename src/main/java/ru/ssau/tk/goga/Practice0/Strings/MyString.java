@@ -114,4 +114,8 @@ public class MyString {
                 ))
                 .toArray(String[]::new);
     }
+
+    static String concatenateStrings(String[] strings) {
+        return String.join(", ", strings);
+    }
 }
